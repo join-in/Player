@@ -21,7 +21,7 @@ public class PlayerController {
     @RequestMapping("/player/{email}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getPlayer(@PathVariable("email") String email) {
-        return Response.status(201).entity(playerService.findPlayerByEmail(email)).header("Access-Control-Allow-Origin","*").build();
+        return Response.status(200).entity(playerService.findPlayerByEmail(email)).header("Access-Control-Allow-Origin","*").build();
 
     }
 
